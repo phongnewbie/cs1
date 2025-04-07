@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh mục sản phẩm</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../CSS/category-manager.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <div id="sidebar">
+        <a href="/index.html"
+          ><div id="logo">
+            <i class="fas fa-fire" style="color: red"></i>Ecommerce
+          </div></a
+        >
+        <ul id="menu">
+          <li>
+            <a href="#"><i class="fa-solid fa-house"></i>Thống kê</a>
+          </li>
+          <li class="active">
+            <a href="#"><i class="fas fa-list"></i>Danh mục</a>
+          </li>
+          <li class="product">
+            <a href="#"><i class="fa-regular fa-folder"></i>Sản phẩm</a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="content">
+        <div class="logo_Data">
+          <i class="fa-solid fa-bell"></i>
+          <img class="logo_DataImg" src="/img/Ellipse 6.png" alt="" />
+          <div class="dropdown">
+            <button onclick="logout()">Đăng xuất</button>
+          </div>
+        </div>
+        <hr />
+        <div id="header">
+          <span>Danh mục</span>
+          <button onclick="showAddGui()">Thêm danh mục mới</button>
+        </div>
+        <div id="fontInput">
+          <div></div>
+          <div>
+            <select name="" id="Status">
+              <option value="Tat ca">Tất cả</option>
+              <option value="Dang hoat dong">Đang hoạt động</option>
+              <option value="Ngung hoat dong">Ngừng hoạt động</option>
+            </select>
+            <input
+              type="text"
+              placeholder="Tìm kiếm danh mục theo tên"
+              id="findNameInput"
+            />
+            <button id="findButton">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </div>
+        <table id="fontTable" cellspacing="0" cellpadding="9">
+          <!-- Nội dung bảng -->
+        </table>
+        <div id="pagination">
+          <button onclick="changePage(-1)" disabled="">←</button>
+          <button onclick="goToPage(1)" class="active">1</button>
+          <button onclick="goToPage(2)" class="">2</button>
+          <button onclick="changePage(1)">→</button>
+        </div>
+      </div>
+    </div>
+    <div id="opacityBackground" class=""></div>
+    <div id="addGui" class="hide">
+      <div id="addGuiHeader">
+        <span>cập nhật danh mục</span>
+        <button onclick="showAddGui(null)">x</button>
+      </div>
+      <p>Mã danh mục</p>
+      <input type="text" class="input" id="inputID" />
+      <p id="errorIDAlert" class="red hide">Mã danh mục không được để trống</p>
+      <p>Tên danh mục</p>
+      <input type="text" class="input" id="inputName" />
+      <p id="errorNameAlert" class="red hide">
+        Tên danh mục không được để trống
+      </p>
+      <p>Trạng thái</p>
+      <input
+        type="radio"
+        name="status"
+        value="Dang hoat dong"
+        class="inputSpace"
+        checked
+      />
+      Đang hoạt động
+      <input type="radio" value="Ngung hoat dong" name="status" /> ngưng hoạt
+      động
+      <hr class="line" />
+      <div id="listAddButton">
+        <div></div>
+        <div>
+          <button id="declineButton">Hủy</button>
+          <button id="addButton" onclick="addItem()">Cập nhật</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="addGui" class="hide">
+      <div id="addGuiHeader">
+        <span>cập nhật danh mục</span>
+        <button onclick="showAddGui()">x</button>
+      </div>
+      <p>Mã danh mục</p>
+      <input type="text" class="input" id="inputID" />
+      <p id="errorIDAlert" class="red hide">Mã danh mục không được để trống</p>
+      <p>Tên danh mục</p>
+      <input type="text" class="input" id="inputName" />
+      <p id="errorNameAlert" class="red hide">
+        Tên danh mục không được để trống
+      </p>
+      <p>Trạng thái</p>
+      <input
+        type="radio"
+        name="status"
+        value="Dang hoat dong"
+        class="inputSpace"
+        checked
+      />
+      Đang hoạt động
+      <input type="radio" value="Ngung hoat dong" name="status" /> ngưng hoạt
+      động
+      <hr class="line" />
+      <div id="listAddButton">
+        <div></div>
+        <div>
+          <button id="declineButton">Hủy</button>
+          <button id="addButton" onclick="addItem()">Cập nhật</button>
+        </div>
+      </div>
+    </div>
+    <script src="../JS/category-manager.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  </body>
+</html>

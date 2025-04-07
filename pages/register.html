@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng ký tài khoản</title>
+    <link rel="stylesheet" href="../CSS/register.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Đăng ký tài khoản</h1>
+      <h4>Đăng ký tài khoản để sử dụng dịch vụ</h4>
+      <div class="name-container">
+        <div>
+          <label for="fullname">Họ và tên đệm:</label>
+          <input type="text" id="fullname" />
+          <span class="error" id="fullnameError"></span>
+        </div>
+        <br />
+        <div>
+          <label for="name">Tên:</label>
+          <input type="text" id="name" />
+          <span class="error" id="nameError"></span>
+        </div>
+      </div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="You@company.com" />
+      <span class="error" id="emailError"></span><br />
+
+      <label for="password">Mật khẩu:</label>
+      <input type="password" id="password" />
+      <span class="error" id="passwordError"></span>
+
+      <span class="error" id="confirmPasswordError"></span>
+
+      <div
+        class="terms-container"
+        style="
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          width: 100%;
+          max-width: 400px;
+        "
+      >
+        <input type="checkbox" id="terms" />
+        <label for="terms" class="terms2"
+          >bạn đồng ý với <a href="">chính sách và điều khoản</a></label
+        >
+      </div>
+      <span class="error" id="termsError"></span>
+      <span class="error" id="termsError"></span>
+
+      <button onclick="register()">Đăng ký</button> <br />
+      <p class="login_Function">
+        Đã có tài khoản?<a href="./login.html">Đăng nhập</a>
+      </p>
+    </div>
+    <script src="../JS/register.js"></script>
+  </body>
+</html>

@@ -1,0 +1,379 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+#container {
+  display: flex;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+#sidebar {
+  width: 200px;
+  height: 220vh;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+#pagination {
+  position: relative;
+  left: 40%;
+  display: flex;
+
+  margin-top: 10px;
+  gap: 5px;
+}
+.hide {
+  display: none;
+}
+#pagination button {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  min-width: 30px;
+  font-size: 14px;
+}
+
+#pagination button.active {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border-color: #007bff;
+}
+
+#pagination button:hover {
+  background-color: #f0f0f0;
+}
+
+#pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+#pagination span {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+#logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#menu {
+  list-style: none;
+  padding: 0;
+}
+
+#menu li {
+  margin-bottom: 10px;
+}
+.logo_Data {
+  position: relative;
+  display: inline-block;
+}
+
+.logo_Data img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.logo_Data .dropdown {
+  display: none;
+  position: absolute;
+
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  z-index: 100;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.fa-bell {
+  position: relative;
+  bottom: 10px;
+  right: 15px;
+}
+
+.logo_Data .dropdown button {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.logo_Data .dropdown button:hover {
+  background-color: #f0f0f0;
+}
+
+.logo_Data:hover .dropdown {
+  display: block;
+}
+
+#menu li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#menu li.active a {
+  background-color: #ddd;
+}
+
+#content {
+  flex-grow: 1;
+  padding: 20px;
+  margin-top: 20px;
+}
+.logo_Data {
+  position: relative;
+  left: 97%;
+}
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header span {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#header button {
+  width: 200px;
+  height: 35px;
+  font-size: 15px;
+  color: white;
+  background-color: #4094f7;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+#fontInput {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+#findNameInput {
+  height: 30px;
+  width: 200px;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+select {
+  height: 35px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+#findButton {
+  height: 36px;
+  width: 35px;
+  border-radius: 0 5px 5px 0;
+  position: relative;
+  right: 6px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+#fontTable {
+  margin: 20px auto;
+  width: 95%;
+  border-collapse: collapse;
+}
+
+#fontTable th,
+#fontTable td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.tdHeader {
+  background-color: #f9fafb;
+}
+
+.td1 {
+  width: 20%;
+}
+
+.td2 {
+  width: 40%;
+}
+
+.td3,
+.td4 {
+  width: 20%;
+  text-align: center;
+}
+
+.trashButton,
+.penButton {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.trashButton {
+  color: red;
+}
+
+.penButton {
+  color: orange;
+}
+
+.hide {
+  display: none;
+}
+
+#addGui {
+  position: fixed;
+  height: 450px;
+  width: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 3;
+  padding: 20px;
+}
+
+#addGuis {
+  position: fixed;
+  height: 450px;
+  width: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 3;
+  padding: 20px;
+}
+
+#addGuiHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+#addGuiHeader span {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 5%;
+}
+
+#addGuiHeader button {
+  font-size: 20px;
+  background: none;
+  border: none;
+  margin-right: 5%;
+  cursor: pointer;
+}
+
+.modalBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.line {
+  margin: 20px 5%;
+  border: 1px solid #ddd;
+}
+
+#addGui p {
+  margin: 10px 5%;
+}
+
+#addGui .input {
+  margin: 0 5% 10px;
+  width: 90%;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+.inputSpace {
+  margin-left: 5%;
+  margin-right: 10px;
+}
+
+#listAddButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 5%;
+}
+
+#addButton,
+#declineButton {
+  height: 35px;
+  width: 80px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#addButton {
+  background-color: #007aff;
+  border: none;
+  color: white;
+}
+
+#declineButton {
+  background-color: white;
+  border: 1px solid black;
+}
+
+.red {
+  color: red;
+}
+
+.statusOff {
+  color: red;
+  background-color: #f7dddd;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.statusOn {
+  color: green;
+  background-color: #ecfdf3;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
