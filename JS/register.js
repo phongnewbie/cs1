@@ -14,7 +14,7 @@ function register() {
   let nameError = document.getElementById("nameError");
   let emailError = document.getElementById("emailError");
   let passwordError = document.getElementById("passwordError");
-
+  let confirmPasswordError = document.getElementById("confirmPasswordError");
   let termsError = document.getElementById("termsError");
 
   // Reset thông báo lỗi
@@ -58,7 +58,13 @@ function register() {
   }
 
   // Kiểm tra mật khẩu xác nhận
-
+  if (confirmPassword === "") {
+    confirmPasswordError.innerText = "Vui lòng nhập lại mật khẩu";
+    isValid = false;
+  } else if (confirmPassword !== password) {
+    confirmPasswordError.innerText = "Mật khẩu xác nhận không trùng khớp";
+    isValid = false;
+  }
   // Kiểm tra điều khoản đã được chọn
   if (!terms) {
     termsError.innerText = "Bạn phải đồng ý với điều khoản";

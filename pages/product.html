@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Danh mục sản phẩm</title>
+    <title>Sản phẩm</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -11,11 +11,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="../CSS/category-manager.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
     />
+    <link rel="stylesheet" href="../CSS/product.css" />
   </head>
   <body>
     <div id="container">
@@ -29,13 +29,13 @@
           <li>
             <a href="#"><i class="fa-solid fa-house"></i>Thống kê</a>
           </li>
-          <li class="active">
-            <a href="#"><i class="fas fa-list"></i>Danh mục</a>
-          </li>
-          <li class="product">
-            <a href="product.html"
-              ><i class="fa-regular fa-folder"></i>Sản phẩm</a
+          <li class="">
+            <a href="category-manager.html"
+              ><i class="fas fa-list"></i>Danh mục</a
             >
+          </li>
+          <li class="active">
+            <a href="#"><i class="fa-regular fa-folder"></i>Sản phẩm</a>
           </li>
         </ul>
       </div>
@@ -50,14 +50,20 @@
         </div>
         <hr />
         <div id="header">
-          <span>Danh mục</span>
+          <span>Sản phẩm</span>
           <button onclick="showAddGui()">Thêm danh mục mới</button>
         </div>
         <div id="fontInput">
           <div></div>
           <div>
             <select name="" id="Status">
-              <option value="Tat ca">Tất cả</option>
+              <option value="Tat ca">Lọc theo danh mục</option>
+              <option value="Dang hoat dong">Đang hoạt động</option>
+              <option value="Ngung hoat dong">Ngừng hoạt động</option>
+            </select>
+
+            <select name="" id="Status">
+              <option value="Tat ca">Lọc theo trạng thái</option>
               <option value="Dang hoat dong">Đang hoạt động</option>
               <option value="Ngung hoat dong">Ngừng hoạt động</option>
             </select>
@@ -150,7 +156,7 @@
         </div>
       </div>
     </div>
-    <script src="../JS/category-manager.js"></script>
+    <script src="../JS/product.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>

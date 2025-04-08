@@ -1,76 +1,78 @@
 body {
-    background-color: aliceblue;
+  background-color: aliceblue;
 }
 body h1 h4 {
-    text-align: center;
+  text-align: center;
 }
 
 .container {
-    width: 35%;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    color: dimgrey;
-    box-shadow: 0px 0px 10px rgba(0, 0, 1, 0.3);
-    margin: auto;
-    margin-top: 50px;
+  width: 35%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  color: dimgrey;
+  box-shadow: 0px 0px 10px rgba(0, 0, 1, 0.3);
+  margin: auto;
+  margin-top: 50px;
 }
 
 h1 {
-    text-align: center;
-    color: black;
-    height: 10px;
+  text-align: center;
+  color: black;
+  height: 10px;
 }
 
 h4 {
   text-align: center;
   opacity: 0.5;
-  height:10px ;
+  height: 10px;
 }
 
 label {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: black;
 }
 
 input {
-    border-radius: 5px;
-    height: 25px;
-    width: 95%;
-    padding: 10px;
-    border: 1px solid #ccc;
-}
+  border-radius: 5px;
+  height: 25px;
 
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+#rememberMe {
+  position: relative;
+  top: 7px;
+}
 .error {
-    color: red;
-    font-size: 14px;
+  color: red;
+  font-size: 14px;
 }
 
 button {
-    background-color: dodgerblue;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    height: 50px;
-    width: 100%;
-    margin-top: 15px;
-    font-size: 16px;
+  background-color: dodgerblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+  width: 100%;
+  margin-top: 15px;
+  font-size: 16px;
 }
 .remember-container {
-    align-items: center;
-    gap: 5px; 
+  align-items: center;
+  gap: 5px;
 }
 
 @media (max-width: 600px) {
-    .name-container {
-        flex-direction: column;
-    }
+  .name-container {
+    flex-direction: column;
+  }
 }
 
 button:hover {
-    background-color: rgb(255, 0, 47);
+  background-color: rgb(255, 0, 47);
 }
-

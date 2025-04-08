@@ -30,25 +30,20 @@
       <label for="password">Mật khẩu:</label>
       <input type="password" id="password" />
       <span class="error" id="passwordError"></span>
-
+      <label for="confirmPassword">Nhập lại mật khẩu:</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        placeholder="Nhập lại mật khẩu"
+      />
       <span class="error" id="confirmPasswordError"></span>
 
-      <div
-        class="terms-container"
-        style="
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          width: 100%;
-          max-width: 400px;
-        "
-      >
+      <div class="terms-container">
         <input type="checkbox" id="terms" />
-        <label for="terms" class="terms2"
+        <label for="terms"
           >bạn đồng ý với <a href="">chính sách và điều khoản</a></label
         >
       </div>
-      <span class="error" id="termsError"></span>
       <span class="error" id="termsError"></span>
 
       <button onclick="register()">Đăng ký</button> <br />
